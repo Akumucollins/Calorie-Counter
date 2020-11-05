@@ -6,7 +6,7 @@ from decouple import config,Csv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+# APPEND_SLASH=False
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 MODE=config("MODE", default="dev")
@@ -27,9 +27,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'calories',
+    'bootstrap4',
+    'crispy_forms',
+    'corsheaders',
+    'rest_framework',
 ]
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -129,6 +137,7 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
+
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
@@ -153,6 +162,3 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
-
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
