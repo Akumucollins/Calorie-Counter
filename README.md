@@ -24,16 +24,16 @@
 ## Setup/Installation Requirements
 To get the code..
 Cloning the repository:
- https://github.com/Akumucollins/Neighbourhood.git
+ https://github.com/Akumucollins/Calorie-Counter.git
   
 Move to the folder and install requirements using
   ```bash
-  cd Hood
+  cd Calorie-Counter
   pip install -r requirements.txt
   ```
 Setup Configurations and  Database
   ```bash 
-  python3 manage.py makemigrations awwwards 
+  python3 manage.py makemigrations
   ``` 
 Running the application
   ```bash
