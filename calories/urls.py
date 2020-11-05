@@ -4,7 +4,6 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register('Profile', views.ProfileView)
-# router.register('Client', views.ClientView)
 router.register('Category', views.CategoryView)
 router.register('Fooditem', views.FooditemView)
 router.register('UserFooditem', views.UserFooditemView)
