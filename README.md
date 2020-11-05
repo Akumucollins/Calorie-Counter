@@ -23,7 +23,7 @@
 
 ## Setup/Installation Requirements
 To get the code..
-Cloning the repository:
+Cloning the repository using:
  https://github.com/Akumucollins/Calorie-Counter.git
   
 Move to the folder and install requirements using
