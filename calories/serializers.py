@@ -25,7 +25,7 @@ class ProfileSerializer(serializers.HyperlinkedModelSerializer):
 class FooditemSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model= Fooditem
-        fields =   ('id','url','category', 'carbohydrate', 'fats', 'protein', 'calorie','quantity')
+        fields =   ('id','url','name','category', 'carbohydrate', 'fats', 'protein', 'calorie','quantity')
 
         
 class CategorySerializer(serializers.HyperlinkedModelSerializer):
